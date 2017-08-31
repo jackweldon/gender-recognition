@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>826</width>
+    <height>702</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QOpenCVWidget" name="cvwidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>531</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>400</width>
+      <height>400</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="iterationsList">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>531</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>400</width>
+      <height>150</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listTotals">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>440</y>
+      <width>241</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>240</width>
+      <height>151</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>171</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Detection Tools</string>
+    </property>
+    <widget class="QPushButton" name="btnStop">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>28</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblFisher">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>110</y>
+       <width>88</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Fisherface File:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboFisher">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>133</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>FERET Faces YML</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>FERET Faces XML</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Nottingham Faces</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Combined </string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboHaar">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>185</y>
+       <width>132</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Haar Face Default</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Harr Face Alt</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LPB Face</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="lblHaar">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>162</y>
+       <width>77</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cascade File:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>240</y>
+      <width>138</width>
+      <height>164</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Advert Tools</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="chkAdverts">
+       <property name="text">
+        <string>Display Adverts</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblDuration">
+       <property name="text">
+        <string>Advert Duration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSlider" name="sliderDuration">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>30</number>
+       </property>
+       <property name="singleStep">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblSize">
+       <property name="text">
+        <string>Advert Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QSlider" name="sliderSize">
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>200</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>826</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QOpenCVWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">qopencvwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

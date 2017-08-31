@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/cascades">
+        <file>cascades/Fisherfaces2nd.yml</file>
+        <file>cascades/haarcascade_frontalface_alt.xml</file>
+        <file>cascades/haarcascade_frontalface_default.xml</file>
+        <file>cascades/TrainedFisherFeret.xml</file>
+    </qresource>
+</RCC>
